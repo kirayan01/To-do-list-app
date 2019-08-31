@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition?>
+
+<fx:root type="javafx.scene.layout.VBox" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ToolbarController">
+    <JFXToolbar>
+        <leftItems>
+            <JFXRippler maskType="CIRCLE" style="-fx-ripple-color:WHITE;">
+                <StackPane fx:id="viewOptionsPopUpContainer">
+                    <JFXHamburger fx:id="viewOptionsPopUpBurger">
+                        <HamburgerBackArrowBasicTransition/>
+                    </JFXHamburger>
+                </StackPane>
+            </JFXRippler>
+            <Label>List View</Label>
+        </leftItems>
+        <rightItems>
+            <JFXRippler fx:id="toolbarPopUpRippler" maskType="CIRCLE" style="-fx-ripple-color:WHITE;">
+                <StackPane fx:id="toolbarPopUpBurger">
+                    <JFXHamburger styleClass="jfx-options-burger">
+                    </JFXHamburger>
+                </StackPane>
+            </JFXRippler>
+        </rightItems>
+    </JFXToolbar>
+</fx:root>

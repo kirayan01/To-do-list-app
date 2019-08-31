@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXChipView?>
+<?import javafx.geometry.Insets?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition?>
+<?import com.jfoenix.controls.JFXRippler?>
+<fx:root type="javafx.scene.layout.StackPane"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="controller.EditTaskController"
+         stylesheets="/css/jfoenix-fonts.css, /css/jfoenix-design.css, /css/jfoenix-main.css, /css/jfoenix-components.css"
+>
+
+
+    <!-- Header -->
+    <BorderPane>
+        <top>
+            <JFXToolbar>
+                <center>
+                    <Label>Edit Task</Label>
+                </center>
+            </JFXToolbar>
+        </top>
+
+        <center>
+            <VBox alignment="CENTER" spacing="25.0" BorderPane.alignment="CENTER">
+                <children>
+                    <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Description" />
+                    <JFXTextField fx:id="description" style="-fx-background-color: #ffffff;">
+                    </JFXTextField>
+                    <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Due Date and Time" />
+                    <JFXDatePicker fx:id="datePicker"
+                                   styleClass="custom-color-picker"></JFXDatePicker>
+                    <JFXTimePicker fx:id="timePicker"
+                                   styleClass="custom-color-picker"></JFXTimePicker>
+                    <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Properties" />
+                    <JFXCheckBox fx:id="isImportantBox" styleClass="custom-jfx-check-box-all-colored" text="Important">
+                    </JFXCheckBox>
+                    <JFXCheckBox fx:id="isUrgentBox" styleClass="custom-jfx-check-box-all-colored" text="Urgent">
+                    </JFXCheckBox>
+                    <JFXComboBox fx:id="statusComboBox" promptText="Staut" />
+                    <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Tags" />
+                    <JFXChipView fx:id="tags" style="-fx-background-color: #ffffff;">
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" />
+                        </padding>
+                    </JFXChipView>
+                </children>
+            </VBox>
+        </center>
+
+
+        <bottom>
+            <VBox>
+                <children>
+                    <HBox alignment="center" spacing="10">
+                        <JFXButton styleClass="button-raised" fx:id="saveButton" onAction="#saveTask">
+                            Save
+                        </JFXButton>
+                        <JFXButton styleClass="button-cancel" fx:id="cancelButton" onAction="#cancelEditTask">
+                            Cancel
+                        </JFXButton>
+                    </HBox>
+                    <Label></Label>
+                </children>
+            </VBox>
+        </bottom>
+    </BorderPane>
+
+</fx:root>

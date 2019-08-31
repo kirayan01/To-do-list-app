@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition?>
+<fx:root fx:controller="controller.TodobarController"
+         type="javafx.scene.layout.VBox"
+         xmlns:fx="http://javafx.com/fxml"
+         stylesheets="/css/todobar.css">
+    <JFXToolbar>
+        <leftItems>
+            <JFXRippler maskType="CIRCLE">
+                <StackPane fx:id="todoActionsPopUpContainer">
+                    <JFXHamburger fx:id="todoActionsPopUpBurger">
+                        <HamburgerBackArrowBasicTransition/>
+                    </JFXHamburger>
+                </StackPane>
+            </JFXRippler>
+            <Label fx:id="descriptionLabel">Buy milk!</Label>
+        </leftItems>
+        <rightItems>
+            <JFXRippler fx:id="todoOptionsPopUpRippler" maskType="CIRCLE">
+                <StackPane fx:id="todoOptionsPopUpBurger">
+                    <JFXHamburger styleClass="jfx-options-burger">
+                    </JFXHamburger>
+                </StackPane>
+            </JFXRippler>
+        </rightItems>
+    </JFXToolbar>
+</fx:root>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<JFXListView fx:id="actionPopUpList" styleClass="option-list-view"
+             onMouseClicked="#submit" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <Label>
+        To Do
+        <graphic>
+            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                <FontAwesomeIconView glyphName="HOURGLASS_ALT" size="1.5em"
+                                     styleClass="option-jfx-list-view-icon"/>
+            </StackPane>
+        </graphic>
+    </Label>
+    <Label>
+        Up Next
+        <graphic>
+            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                <FontAwesomeIconView glyphName="HOURGLASS_1" size="1.5em"
+                                     styleClass="option-jfx-list-view-icon"/>
+            </StackPane>
+        </graphic>
+    </Label>
+    <Label>
+        In Progress
+        <graphic>
+            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                <FontAwesomeIconView glyphName="HOURGLASS_2" size="1.5em"
+                                     styleClass="option-jfx-list-view-icon"/>
+            </StackPane>
+        </graphic>
+    </Label>
+    <Label>
+        Done
+        <graphic>
+            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                <FontAwesomeIconView glyphName="HOURGLASS_3" size="1.5em"
+                                     styleClass="option-jfx-list-view-icon"/>
+            </StackPane>
+        </graphic>
+    </Label>
+    <Label>
+        Pomodoro!
+        <graphic>
+            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                <FontAwesomeIconView glyphName="CLOCK_ALT" size="1.5em"
+                                     styleClass="option-jfx-list-view-icon"/>
+            </StackPane>
+        </graphic>
+    </Label>
+</JFXListView>

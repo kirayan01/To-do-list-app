@@ -1,0 +1,51 @@
+.jfx-tool-bar {
+    -fx-font-size: 20.0;
+    -fx-font-weight: NORMAL;
+    -fx-background-color: WHITE;
+    -fx-pref-width: 100.0%;
+    -fx-pref-height: 64.0px;
+    -fx-color: BLACK;
+}
+
+.jfx-tool-bar HBox {
+    -fx-alignment: center;
+    -fx-spacing: 25.0;
+    -fx-padding: 0.0 10.0;
+}
+
+.jfx-tool-bar Label {
+    -fx-text-fill: BLACK;
+}
+
+.jfx-tool-bar .jfx-options-burger {
+    -fx-padding: 22px;
+}
+
+.jfx-hamburger {
+    -fx-spacing: 5;
+    -fx-cursor: hand;
+}
+
+.jfx-hamburger StackPane {
+    -fx-background-color: #000000;
+}
+
+.jfx-tool-bar .jfx-options-burger StackPane {
+    -fx-pref-width: 4px;
+    -fx-background-color: BLACK;
+}
+
+.jfx-tool-bar .jfx-rippler {
+    -jfx-rippler-fill: BLACK;
+}
+
+.option-list-view {
+    -fx-pref-width: 160.0px;
+    -fx-background-color: BLACK;
+}
+
+.option-jfx-list-view-icon {
+    -fx-fill: #5264AE;
+    -fx-padding: 0.0 10.0 0.0 5.0;
+    -fx-cursor: hand;
+}

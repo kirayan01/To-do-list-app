@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXChipView?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition?>
+<?import javafx.scene.text.Font?>
+<fx:root type="javafx.scene.layout.StackPane"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="controller.AddTaskController"
+         stylesheets="/css/jfoenix-fonts.css, /css/jfoenix-design.css, /css/jfoenix-main.css, /css/jfoenix-components.css" >
+
+    <!-- Header -->
+    <BorderPane>
+        <top>
+            <JFXToolbar>
+                <center>
+                    <Label>Add Task</Label>
+                </center>
+            </JFXToolbar>
+        </top>
+
+        <!-- Content Area -->
+        <center>
+
+            <VBox alignment="CENTER" spacing="25.0" BorderPane.alignment="CENTER">
+                <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Description" />
+
+                <JFXTextArea fx:id="description" style="-fx-background-color: #ffffff;" wrapText="true">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </JFXTextArea>
+
+
+            </VBox>
+
+        </center>
+
+        <bottom>
+            <VBox>
+                <children>
+                    <HBox alignment="center" spacing="10">
+                        <JFXButton styleClass="button-raised" fx:id="saveButton" onAction="#saveTask">
+                            Save
+                        </JFXButton>
+                        <JFXButton styleClass="button-cancel" fx:id="cancelButton" onAction="#cancelNewTask">
+                            Cancel
+                        </JFXButton>
+                    </HBox>
+                    <Label></Label>
+                </children>
+            </VBox>
+        </bottom>
+    </BorderPane>
+
+
+
+</fx:root>

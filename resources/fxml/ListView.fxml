@@ -1,0 +1,39 @@
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import ui.Toolbar?>
+<?import ui.AddButton?>
+<?import ui.Todobar?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.geometry.Insets?>
+<fx:root type="javafx.scene.layout.StackPane"
+         fx:controller="controller.ListViewController"
+         xmlns:fx="http://javafx.com/fxml"
+         alignment="center"
+         fx:id="root"
+         stylesheets="/css/jfoenix-fonts.css, /css/jfoenix-design.css, /css/jfoenix-main.css" >
+
+<BorderPane>
+    <!-- Header -->
+    <top>
+        <Toolbar/>
+    </top>
+
+    <!-- Content Area -->
+    <center>
+        <VBox fx:id="tasks"></VBox>
+    </center>
+
+    <!-- Bottom Area -->
+    <bottom>
+        <AddButton />
+    </bottom>
+
+    <padding>
+        <Insets bottom="20.0" left="0" right="0" top="0" />
+    </padding>
+</BorderPane>
+</fx:root>

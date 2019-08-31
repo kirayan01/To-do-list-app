@@ -1,0 +1,8 @@
+#chipviewlabel {
+    -fx-font-size: 20.0;
+    -fx-font-weight: NORMAL;
+    -fx-background-color: WHITE;
+    -fx-pref-width: 100.0%;
+    -fx-pref-height: 64.0px;
+    -fx-color: BLACK;
+}

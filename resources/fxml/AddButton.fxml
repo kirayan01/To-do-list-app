@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+<fx:root type="javafx.scene.layout.StackPane"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="controller.AddButtonController"
+         stylesheets="/css/jfoenix-components.css">
+
+    <JFXNodesList
+        fx:id="nodesList"
+        rotate="180.0"
+        spacing="15"
+        StackPane.alignment="CENTER"
+    >
+        <children>
+            <JFXButton
+                    fx:id="newButton"
+                    contentDisplay="GRAPHIC_ONLY"
+                    styleClass="main-button"
+            >
+                <graphic>
+                    <FontAwesomeIconView
+                            glyphName="PLUS"
+                            size="24"
+                            styleClass="main-icon"
+                    />
+                </graphic>
+            </JFXButton>
+            <JFXButton
+                    fx:id="addTaskButton"
+                    contentDisplay="GRAPHIC_ONLY"
+                    styleClass="animated-option-button"
+                    onAction="#onNewTask"
+            >
+                <graphic>
+                    <FontAwesomeIconView
+                            glyphName="CALENDAR_PLUS_ALT"
+                            size="24"
+                            styleClass="sub-icon"
+                    />
+                </graphic>
+            </JFXButton>
+            <JFXButton
+                    fx:id="addProjectButton"
+                    contentDisplay="GRAPHIC_ONLY"
+                    styleClass="animated-option-button"
+                    onAction="#onNewProject"
+            >
+                <graphic>
+                    <FontAwesomeIconView
+                            glyphName="PRODUCT_HUNT"
+                            size="24"
+                            styleClass="sub-icon"
+                    />
+                </graphic>
+            </JFXButton>
+        </children>
+    </JFXNodesList>
+</fx:root>
